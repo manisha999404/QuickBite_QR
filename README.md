@@ -92,7 +92,7 @@ With **Next.js 14 App Router** + **Supabase Realtime**, the platform supports fa
 ---
 
 ## 🗂️ Folder Structure
----
+```
 
 QUICK_BITE_QR_MAIN/
 │
@@ -121,6 +121,7 @@ QUICK_BITE_QR_MAIN/
 ├── SUPABASE_LIMITS_AND_CONSTRAINTS.md
 │
 └── README.md
+```
 ---
 
 ## ⚙️ Setup & Installation
@@ -191,13 +192,13 @@ This provides:
 ---
 
 ## 📄 License
-
-This project is open-source under the MIT License.
+- This project is open-source under the MIT License.
 ---
 
-## 🎉 Thank You for Using QuickBite QR!
+### **🎉 Thank You for Using QuickBite QR!**
 
 ---
+
 
 
 
