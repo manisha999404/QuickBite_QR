@@ -89,8 +89,10 @@ With **Next.js 14 App Router** + **Supabase Realtime**, the platform supports fa
                             │
                             ▼
                      Staff Order Updates
+---
 
-🗂️ Folder Structure
+## 🗂️ Folder Structure
+---
 
 QUICK_BITE_QR_MAIN/
 │
@@ -119,58 +121,84 @@ QUICK_BITE_QR_MAIN/
 ├── SUPABASE_LIMITS_AND_CONSTRAINTS.md
 │
 └── README.md
+---
 
-⚙️ Setup & Installation
+## ⚙️ Setup & Installation
 1. Clone the repository
+```bash
    git clone https://github.com/manisha999404/QuickBite_QR.git
    cd QuickBite_QR
-2. Install dependencies
+```
+3. Install dependencies
+```bash
    npm install
+```
+---
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
-Create an .env.local file in the root directory:
+Create a **.env.local** file in the project root and add the following keys:
+
+```
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role
 DATABASE_URL=your_postgres_connection_url
+```
 
----
 
 ## ▶️ Running the Project
 
 ### **Development Mode**
 ```bash
-npm run dev
+npm run dev 
+```
+Project runs at ➝ **http://localhost:3000/**
+---
 
+## 🏗️ Build for Production
 
-Project runs at:
-👉 http://localhost:3000/
-
-Build for Production
-
+### **Create an optimized production build:**
+```bash
 npm run build
 npm start
+```
+---
 
-Deploy
+## 🚀 Deploy
 
-Recommended:
- Frontend → Vercel
- Backend (DB/Auth/Realtime/Functions) → Supabase
+### **Recommended Setup**
+- Frontend → Vercel
+- Backend (DB/Auth/Realtime/Functions) → Supabase
 
-🚀 Future Enhancements
- Payment integration (Razorpay / Stripe)
- Advanced analytics dashboard (popular items, peak hours)
- Vendor mobile app
- PWA support with offline caching
- Multi-vendor support (multiple food stalls in one system)
- Table QR mapping
+This provides:
+- Serverless scaling
+- Instant deployments
+- Realtime updates
 
-📄 License
+---
+
+## 🚧 Future Enhancements
+
+- 💳 Payment integration (Razorpay / Stripe)
+- 📊 Analytics dashboard (popular items, peak hours)
+- 📱 Vendor mobile app
+- 📦 PWA support (offline mode)
+- 🏪 Multi-vendor support
+- 🪪 Table QR mapping
+- 🔔 Push notifications
+
+---
+
+## 📄 License
 
 This project is open-source under the MIT License.
+---
 
-🎉 Thank You for Using QuickBite QR!
+## 🎉 Thank You for Using QuickBite QR!
+
+---
+
 
 
 
