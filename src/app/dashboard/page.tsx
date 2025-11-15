@@ -1,0 +1,82 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import EnhancedLiveOrders from "@/components/EnhancedLiveOrders";
+
+export default function DashboardPage() {
+  const [isOffline, setIsOffline] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error] = useState<string | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 800);
+
+    const handleOnline = () => setIsOffline(false);
+    const handleOffline = () => setIsOffline(true);
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    setIsOffline(!navigator.onLine);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30">
+      {/* Hero / Banner Section */}
+      <div className="relative overflow-hidden rounded-xl mb-4 lg:mb-8">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/60 to-indigo-900/40 z-10"></div>
+        <div className="relative z-20 p-4 sm:p-6 lg:p-10 text-white">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            Welcome to QuickBite QR Dashboard
+          </h1>
+          <p className="mt-2 text-base sm:text-lg opacity-80">
+            Manage your restaurant tables, menu, and live orders in one place.
+          </p>
+        </div>
+      </div>
+
+      {/* Offline Banner */}
+      {isOffline && (
+        <motion.div
+          className="bg-red-500 text-white text-center py-2 font-medium"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          ⚠️ You are offline. Some features may not be available.
+        </motion.div>
+      )}
+
+      {/* Main Dashboard Content */}
+      <div className="flex-1 px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-12">
+        <div className="max-w-[2000px] mx-auto space-y-4 lg:space-y-8">
+          {loading ? (
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <p className="animate-pulse text-gray-500">
+                Loading dashboard...
+              </p>
+            </div>
+          ) : error ? (
+            <div className="bg-red-100 text-red-600 p-4 rounded-lg">
+              Failed to load dashboard: {error}
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <EnhancedLiveOrders />
+            </motion.div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
