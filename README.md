@@ -1,58 +1,71 @@
-﻿# Quick_Bite_Qr : Smart QR-Based Food Ordering System
- A Next.js + Supabase powered digital ordering system designed for small eateries, campus food stalls, cafés, and tapris.
- Customers scan a QR → view the menu → place orders → staff track them in real-time.
+# QuickBite_QR : Smart QR-Based Food Ordering System
 
- 📖Overview
+A Next.js + Supabase powered digital ordering system designed for small eateries, campus food stalls, cafés, and tapris.  
+Customers scan a QR → view the menu → place orders → staff track them in real-time.
 
-QuickBite QR is a full digital ordering system that replaces manual order-taking at food stalls.
+---
+
+## 📖 Overview
+
+QuickBite QR is a full digital ordering system that replaces manual order-taking at food stalls.  
 Designed especially for college campus tapris and night-time eateries, it simplifies:
--Ordering
--Menu browsing
--Live order tracking
--Vendor-side kitchen management
-With Next.js 14 App Router + Supabase Realtime, the platform supports fast, serverless, and scalable functionality.
 
-⭐ Features
+- Ordering  
+- Menu browsing  
+- Live order tracking  
+- Vendor-side kitchen management  
 
-🍽️ Customer Side
--Scan QR to access menu
--Browse items & add to cart
--Place orders instantly
--Track order status (Placed → Cooking → Ready)
+With **Next.js 14 App Router** + **Supabase Realtime**, the platform supports fast, serverless, and scalable functionality.
 
-👨‍🍳 Vendor / Staff Dashboard
--Live order feed (auto-updates)
--Update order state
--Order history log
--Manage operational workflow
+---
 
-📊 Admin / Management
--Menu management (add/edit/remove items)
--Price & availability toggles
+## ⭐ Features
 
-🧰 Tech Stack
+### 🍽️ Customer Side
+- Scan QR to access menu  
+- Browse items & add to cart  
+- Place orders instantly  
+- Track order status (Placed → Cooking → Ready)
 
-Frontend
- Next.js 14 (App Router)
- React 18
- TypeScript
- Tailwind CSS
- shadcn/ui (Radix-based UI components)
+### 👨‍🍳 Vendor / Staff Dashboard
+- Live order feed (auto-updates)  
+- Update order status  
+- Order history log  
+- Manage operational workflow  
 
-Backend
- Supabase (Backend-as-a-Service)
- PostgreSQL Database
- Supabase Auth
- Supabase Realtime
- Edge Functions (Deno runtime)
+### 🛠️ Admin / Management
+- Menu management (add/edit/remove items)  
+- Price & availability toggles  
 
-Dev Tools
- ESLint
- PostCSS
- Vercel Deployment
- Git & GitHub
+---
 
-Architecture
+## 🧰 Tech Stack
+
+### **Frontend**
+- Next.js 14 (App Router)  
+- React 18  
+- TypeScript  
+- Tailwind CSS  
+- shadcn/ui (Radix-based UI components)
+
+### **Backend**
+- Supabase (Backend-as-a-Service)  
+- PostgreSQL Database  
+- Supabase Auth  
+- Supabase Realtime  
+- Supabase Edge Functions (Deno runtime)
+
+### **Dev Tools**
+- ESLint  
+- PostCSS  
+- Vercel Deployment  
+- Git & GitHub  
+
+---
+
+## 🏗️ Architecture
+
+
 
       ┌──────────────┐        ┌────────────────────┐
       │   Customer    │        │      Vendor         │
@@ -122,10 +135,14 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role
 DATABASE_URL=your_postgres_connection_url
 
-▶️ Running the Project
+---
 
-Development Mode
+## ▶️ Running the Project
+
+### **Development Mode**
+```bash
 npm run dev
+
 
 Project runs at:
 👉 http://localhost:3000/
@@ -154,6 +171,7 @@ Recommended:
 This project is open-source under the MIT License.
 
 🎉 Thank You for Using QuickBite QR!
+
 
 
 
